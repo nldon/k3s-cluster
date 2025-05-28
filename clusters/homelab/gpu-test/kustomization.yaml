@@ -1,3 +1,5 @@
 resources:
   - namespace.yaml
   - gpu-test-pod.yaml
+  - runtime-class.yaml
+  - daemonset.yaml
