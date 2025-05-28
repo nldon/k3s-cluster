@@ -2,3 +2,4 @@
 resources:
   - ./nginx
   - ./monitoring
+  - ./gpu-test
