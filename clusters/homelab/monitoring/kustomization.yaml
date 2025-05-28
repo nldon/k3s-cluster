@@ -2,4 +2,4 @@ resources:
   - helm-repo.yaml
   - helm-release.yaml
   - namespace.yaml
-  - ingressroute-grafana.yaml
+  - ingress-grafana.yaml
