@@ -8,7 +8,7 @@ spec:
     spec:
       containers:
       - name: nvidia-smi
-        image: nvidia/cuda:11.0-base
+        image: nvidia/cuda:12.3.2-base-ubuntu22.04
         command: ["nvidia-smi"]
         resources:
           limits:
