@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   name: nvidia-device-plugin-daemonset
-  namespace: kube-system
+  namespace: gpu
 spec:
   selector:
     matchLabels:
@@ -23,7 +23,7 @@ spec:
               - key: workload
                 operator: In
                 values:
-                - "gpu-test"
+                - "gpu"
       tolerations:
       - key: nvidia.com/gpu
         operator: Exists
