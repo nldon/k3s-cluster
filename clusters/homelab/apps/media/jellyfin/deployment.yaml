@@ -23,10 +23,10 @@ spec:
           volumeMounts:
             - name: nfs-share
               mountPath: /media
-              subPath: jellyfin/config
+              subPath: jellyfin/data
             - name: nfs-share
               mountPath: /config
-              subPath: jellyfin/data
+              subPath: jellyfin/config
       volumes:
         - name: nfs-share
           persistentVolumeClaim:
