@@ -1,3 +1,4 @@
 resources:
   - namespace.yaml
   - nvidia-device-plugin.yaml
+  - runtime-class.yaml
