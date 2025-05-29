@@ -22,11 +22,11 @@ spec:
             - containerPort: 8096
           volumeMounts:
             - name: nfs-share
-              mountPath: /config
-              subPath: config
-            - name: nfs-share
               mountPath: /media
-              subPath: media
+              subPath: jellyfin/config
+            - name: nfs-share
+              mountPath: /config
+              subPath: jellyfin/data
       volumes:
         - name: nfs-share
           persistentVolumeClaim:

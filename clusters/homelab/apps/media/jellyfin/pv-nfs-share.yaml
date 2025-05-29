@@ -10,5 +10,5 @@ spec:
   storageClassName: nfs
   nfs:
     server: 10.3.2.188
-    path: /nfs_share
+    path: /mnt/nfs_share
   persistentVolumeReclaimPolicy: Retain
