@@ -2,4 +2,5 @@
 resources:
   - ./nginx
   - ./monitoring
-  - ./gpu-test
+  - ./infrastructure
+  - ./apps
