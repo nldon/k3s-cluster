@@ -9,6 +9,6 @@ spec:
     storage: 100Gi
   storageClassName: nfs
   nfs:
-    server: 10.3.2.188
+    server: 10.3.2.202
     path: /mnt/nfs_share
   persistentVolumeReclaimPolicy: Retain
