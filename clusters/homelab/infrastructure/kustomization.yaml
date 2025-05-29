@@ -1,2 +1,2 @@
 resources:
-  - gpu/kustomization.yaml
+  - ./gpu

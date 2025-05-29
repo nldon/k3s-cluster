@@ -1,2 +1,2 @@
 resources:
-  - media/kustomization.yaml
+  - ./media

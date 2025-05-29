@@ -1,2 +1,2 @@
 resources:
-  - jellyfin/kustomization.yaml
+  - ./jellyfin
