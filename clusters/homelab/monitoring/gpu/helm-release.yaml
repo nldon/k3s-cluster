@@ -16,5 +16,3 @@ spec:
   values:
     service:
       enabled: true
-    podLabels:
-      app.kubernetes.io/name: dcgm-exporter
