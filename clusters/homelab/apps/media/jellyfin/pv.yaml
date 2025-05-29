@@ -26,5 +26,5 @@ spec:
   storageClassName: nfs
   nfs:
     server: 10.3.2.188
-    path: /nfs-share/jellyfin/media
+    path: /nfs_share/jellyfin/data
   persistentVolumeReclaimPolicy: Retain
