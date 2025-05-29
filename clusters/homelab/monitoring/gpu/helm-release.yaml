@@ -16,5 +16,6 @@ spec:
   values:
     nodeSelector:
       workload: gpu
+    runtimeClassName: nvidia
     service:
       enabled: true
