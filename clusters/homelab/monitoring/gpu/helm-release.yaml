@@ -14,5 +14,7 @@ spec:
         name: nvdp
         namespace: flux-system
   values:
+    nodeSelector:
+      workload: gpu
     service:
       enabled: true
