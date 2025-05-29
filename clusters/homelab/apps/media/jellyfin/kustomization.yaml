@@ -3,5 +3,5 @@ resources:
   - deployment.yaml
   - service.yaml
   - ingress.yaml
-  - pv.yaml
-  - pvc.yaml
+  - pv-nfs-share.yaml
+  - pvc-nfs-share.yaml
