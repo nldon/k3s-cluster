@@ -30,6 +30,9 @@ spec:
             - name: nfs-share
               mountPath: /config
               subPath: jellyfin/config
+          env:
+            - name: NVIDIA_VISIBLE_DEVICES
+              value: all
       volumes:
         - name: nfs-share
           persistentVolumeClaim:
