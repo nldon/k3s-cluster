@@ -3,4 +3,3 @@ resources:
   - helm-release.yaml
   - namespace.yaml
   - ingress-grafana.yaml
-  - additional-scrape-config.yaml
