@@ -25,4 +25,4 @@ spec:
       prometheusSpec:
         additionalScrapeConfigs:
           name: prometheus-additional-scrape-configs
-          key: additional-scrape-config.yaml
+          key: prometheus-additional-scrape-configs.yaml
