@@ -37,6 +37,8 @@ spec:
             value: "false"
           - name: NVIDIA_DEVICE_PLUGIN_CONFIG
             value: /var/lib/nvidia-device-plugin/config/any
+          - name: GLOG_v
+            value: "3"
         securityContext:
           allowPrivilegeEscalation: false
           capabilities:
