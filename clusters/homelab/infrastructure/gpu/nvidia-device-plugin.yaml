@@ -36,7 +36,7 @@ spec:
           - name: FAIL_ON_INIT_ERROR
             value: "false"
           - name: NVIDIA_DEVICE_PLUGIN_CONFIG
-    value: /var/lib/nvidia-device-plugin/config/any
+            value: /var/lib/nvidia-device-plugin/config/any
         securityContext:
           allowPrivilegeEscalation: false
           capabilities:
