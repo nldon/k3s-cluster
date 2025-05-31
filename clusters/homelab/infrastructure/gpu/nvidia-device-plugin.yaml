@@ -35,6 +35,8 @@ spec:
         env:
           - name: FAIL_ON_INIT_ERROR
             value: "false"
+          - name: NVIDIA_DEVICE_PLUGIN_CONFIG
+    value: /var/lib/nvidia-device-plugin/config/any
         securityContext:
           allowPrivilegeEscalation: false
           capabilities:
@@ -42,7 +44,12 @@ spec:
         volumeMounts:
           - name: device-plugin
             mountPath: /var/lib/kubelet/device-plugins
+          - name: time-slicing-config
+            mountPath: /var/lib/nvidia-device-plugin/config
       volumes:
         - name: device-plugin
           hostPath:
             path: /var/lib/kubelet/device-plugins
+        - name: time-slicing-config
+          configMap:
+            name: time-slicing-config
