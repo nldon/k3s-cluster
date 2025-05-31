@@ -35,10 +35,8 @@ spec:
         env:
           - name: FAIL_ON_INIT_ERROR
             value: "false"
-          - name: NVIDIA_DEVICE_PLUGIN_CONFIG
+          - name: CONFIG_FILE
             value: /var/lib/nvidia-device-plugin/config/any
-          - name: GLOG_v
-            value: "3"
         securityContext:
           allowPrivilegeEscalation: false
           capabilities:
