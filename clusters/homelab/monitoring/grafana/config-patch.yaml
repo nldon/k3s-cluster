@@ -14,7 +14,7 @@ data:
     name = Keycloak
     allow_sign_up = true
     client_id = grafana-oauth
-    client_secret = OzyIcwMyLAHrGI0moFwUe40PknCNMFeH
+    client_secret = zM0IxVs2oiaOE8Y4IeMXgyNIRrehKPt3
     scopes = openid email profile offline_access roles
     email_attribute_path = email
     login_attribute_path = username
