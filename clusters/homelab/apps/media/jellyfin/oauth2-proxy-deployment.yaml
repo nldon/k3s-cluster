@@ -30,9 +30,7 @@ spec:
             - --email-domain=*
             - --scope=openid profile email
             - --set-xauthrequest=true
-            - --pass-access-token=true
-            - --pass-authorization-header=true
-            - --skip-provider-button=true
+            - --pass-basic-auth=true
           ports:
             - containerPort: 4180
           readinessProbe:
