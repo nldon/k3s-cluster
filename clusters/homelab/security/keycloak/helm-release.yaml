@@ -5,13 +5,10 @@ metadata:
   namespace: keycloak
 spec:
   interval: 5m
-  chart:
-    spec:
-      chart: keycloak
-      sourceRef:
-        kind: HelmRepository
-        name: bitnami
-        namespace: flux-system
+  chartRef:
+    kind: OCIRepository
+    name: bitnami-keycloak
+    namespace: flux-system
   values:
     auth:
       adminUser: admin
