@@ -4,3 +4,4 @@ resources:
   - ./infrastructure
   - ./apps
   - ./security
+  - ./secrets
