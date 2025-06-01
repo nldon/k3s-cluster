@@ -10,7 +10,7 @@ data:
     name = Keycloak
     allow_sign_up = true
     client_id = grafana
-    client_secret = 4YdvrM5v0cTz3NOkndI7WW67ei0KLBgCgrafana
+    client_secret = 4YdvrM5v0cTz3NOkndI7WW67ei0KLBgC
     scopes = openid,profile,email
     auth_url = https://keycloak.donlab.uk/auth/realms/donlab/protocol/openid-connect/auth
     token_url = https://keycloak.donlab.uk/auth/realms/donlab/protocol/openid-connect/token
