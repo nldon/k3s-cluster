@@ -1,0 +1,33 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: keycloak
+  namespace: keycloak
+spec:
+  interval: 5m
+  chart:
+    spec:
+      chart: keycloak
+      sourceRef:
+        kind: HelmRepository
+        name: bitnami
+        namespace: flux-system
+  values:
+    auth:
+      adminUser: admin
+      adminPassword: admin
+    service:
+      type: ClusterIP
+    ingress:
+      enabled: true
+      hostname: keycloak.donlab.uk
+      ingressClassName: traefik
+      annotations:
+        traefik.ingress.kubernetes.io/router.entrypoints: websecure
+        traefik.ingress.kubernetes.io/router.tls: "true"
+      tls: false
+    postgresql:
+      enabled: true
+      auth:
+        postgresPassword: admin
+        password: admin
