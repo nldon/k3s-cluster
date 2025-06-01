@@ -19,13 +19,6 @@ spec:
       adminPassword: "admin"
       service:
         type: ClusterIP
-      extraConfigMapMounts:
-        - name: grafana-custom-config
-          mountPath: /etc/grafana/grafana.ini
-          subPath: grafana.ini
-          configMap:
-            name: grafana-custom-config
-            namespace: monitoring
     prometheus:
       service:
         type: ClusterIP

@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: grafana-custom-config
+  name: kube-prometheus-stack-grafana
   namespace: monitoring
 data:
   grafana.ini: |
