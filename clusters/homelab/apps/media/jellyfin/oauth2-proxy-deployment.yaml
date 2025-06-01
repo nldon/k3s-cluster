@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: oauth2-proxy
+  namespace: jellyfin
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: oauth2-proxy
+  template:
+    metadata:
+      labels:
+        app: oauth2-proxy
+    spec:
+      containers:
+        - name: oauth2-proxy
+          image: quay.io/oauth2-proxy/oauth2-proxy:latest
+          imagePullPolicy: IfNotPresent
+          args:
+            - --provider=oidc
+            - --oidc-issuer-url=http://keycloak.donlab.uk/realms/donlab
+            - --client-id=jellyfin-oauth
+            - --client-secret=JLvZoXu1sgsNN6vUHYOJhMzpCx93baNe
+            - --cookie-secret=somerandomstring
+            - --cookie-secure=false
+            - --upstream=http://jellyfin.media.svc.cluster.local:8096/
+            - --http-address=0.0.0.0:4180
+            - --redirect-url=http://jellyfin.donlab.uk/oauth2/callback
+            - --email-domain=*
+            - --scope=openid profile email
+            - --set-xauthrequest=true
+            - --pass-access-token=true
+            - --pass-authorization-header=true
+            - --skip-provider-button=true
+          ports:
+            - containerPort: 4180
+          readinessProbe:
+            httpGet:
+              path: /ping
+              port: 4180
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /ping
+              port: 4180
+            initialDelaySeconds: 10
+            periodSeconds: 20

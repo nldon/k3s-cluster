@@ -3,6 +3,8 @@ kind: Ingress
 metadata:
   name: jellyfin
   namespace: jellyfin
+  annotations:
+    traefik.ingress.kubernetes.io/router.entrypoints: web
 spec:
   rules:
     - host: jellyfin.donlab.uk
@@ -12,6 +14,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: jellyfin
+                name: oauth2-proxy
                 port:
-                  number: 8096
+                  number: 80

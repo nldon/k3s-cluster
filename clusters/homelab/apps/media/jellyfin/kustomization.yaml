@@ -5,3 +5,5 @@ resources:
   - ingress.yaml
   - pv-nfs-share.yaml
   - pvc-nfs-share.yaml
+  - oauth2-proxy-deployment.yaml
+  - oauth2-proxy-service.yaml
