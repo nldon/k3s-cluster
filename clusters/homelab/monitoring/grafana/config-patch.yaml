@@ -22,4 +22,6 @@ data:
     auth_url = http://keycloak.donlab.uk/realms/donlab/protocol/openid-connect/auth
     token_url = http://keycloak.donlab.uk/realms/donlab/protocol/openid-connect/token
     user_info_url = http://keycloak.donlab.uk/realms/donlab/protocol/openid-connect/userinfo
-    role_attribute_path = contains(roles[*], 'admin') && 'Admin' || contains(roles[*], 'editor') && 'Editor' || 'Viewer'
+    role_attribute_path = contains(roles[*], 'grafanaadmin') && 'GrafanaAdmin' || contains(roles[*], 'admin') && 'Admin' || contains(roles[*], 'editor') && 'Editor' || 'Viewer'
+    role_attribute_strict = true
+    allow_assign_grafana_admin = true
