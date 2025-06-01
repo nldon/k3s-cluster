@@ -15,14 +15,6 @@ spec:
       adminPassword: admin
     service:
       type: ClusterIP
-    ingress:
-      enabled: true
-      hostname: keycloak.donlab.uk
-      ingressClassName: traefik
-      annotations:
-        traefik.ingress.kubernetes.io/router.entrypoints: websecure
-      path: /
-      pathType: Prefix
     postgresql:
       enabled: true
       auth:
