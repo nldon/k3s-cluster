@@ -24,7 +24,7 @@ spec:
             - --client-secret=JLvZoXu1sgsNN6vUHYOJhMzpCx93baNe
             - --cookie-secret=somerandomstring
             - --cookie-secure=false
-            - --upstream=http://jellyfin.media.svc.cluster.local:8096/
+            - --upstream=http://jellyfin.jellyfin.svc.cluster.local:8096/
             - --http-address=0.0.0.0:4180
             - --redirect-url=http://jellyfin.donlab.uk/oauth2/callback
             - --email-domain=*
