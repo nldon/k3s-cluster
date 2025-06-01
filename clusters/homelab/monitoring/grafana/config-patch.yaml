@@ -6,7 +6,7 @@ metadata:
 data:
   grafana.ini: |
     [server]
-    root_url = https://grafana.donlab.uk
+    root_url = http://grafana.donlab.uk
     [auth]
     disable_login_form = true
     [auth.generic_oauth]
@@ -19,7 +19,7 @@ data:
     email_attribute_path = email
     login_attribute_path = username
     name_attribute_path = full_name
-    auth_url = https://keycloak.donlab.uk/realms/donlab/protocol/openid-connect/auth
-    token_url = https://keycloak.donlab.uk/realms/donlab/protocol/openid-connect/token
-    user_info_url = https://keycloak.donlab.uk/realms/donlab/protocol/openid-connect/userinfo
+    auth_url = http://keycloak.donlab.uk/realms/donlab/protocol/openid-connect/auth
+    token_url = http://keycloak.donlab.uk/realms/donlab/protocol/openid-connect/token
+    user_info_url = http://keycloak.donlab.uk/realms/donlab/protocol/openid-connect/userinfo
     role_attribute_path = contains(roles[*], 'admin') && 'Admin' || contains(roles[*], 'editor') && 'Editor' || 'Viewer'
