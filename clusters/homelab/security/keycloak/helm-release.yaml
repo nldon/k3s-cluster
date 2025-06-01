@@ -21,8 +21,6 @@ spec:
       ingressClassName: traefik
       annotations:
         traefik.ingress.kubernetes.io/router.entrypoints: websecure
-        traefik.ingress.kubernetes.io/router.tls: "false"
-      tls: false
       path: /
       pathType: Prefix
     postgresql:
