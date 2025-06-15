@@ -1,4 +1,4 @@
 resources:
-  - ./grafana
+  - namespace.yaml
   - ./gpu
   - ./prometheus
